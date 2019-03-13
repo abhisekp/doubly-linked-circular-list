@@ -1,0 +1,29 @@
+{
+  "sourceMaps": true,
+  "presets": [
+    [
+      "proposals",
+      {
+        "all": true,
+        "loose": true
+      }
+    ],
+    [
+      "@babel/preset-env",
+      {
+        "loose": false,
+        "useBuiltIns": false,
+        "shippedProposals": true,
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    [
+      "@babel/preset-typescript",
+      {
+        "allExtensions": true
+      }
+    ]
+  ]
+}
