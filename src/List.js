@@ -1,11 +1,9 @@
 import debug from './debug';
 import { Node, checkNode } from './Node';
-import decorator from './decorator'
 
 const dList = debug('DLCList');
 const dListAdd = dList.extend('add');
 
-@decorator
 export class DoublyLinkedCircularList {
   head?: Node = null;
 
@@ -13,7 +11,6 @@ export class DoublyLinkedCircularList {
     values.forEach(::this.add)
   }
 
-  @decorator
   add(value) {
     return this.insert(value)
   }
@@ -123,6 +120,4 @@ export class DoublyLinkedCircularList {
   toString() {
     return this.toJSON(null, 2);
   }
-
-  next() {}
 }
